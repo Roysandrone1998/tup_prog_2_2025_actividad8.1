@@ -38,6 +38,9 @@
             btnConfirmar = new Button();
             btnActualizar = new Button();
             button1 = new Button();
+            btnImportar = new Button();
+            openFileDialog1 = new OpenFileDialog();
+            saveFileDialog1 = new SaveFileDialog();
             SuspendLayout();
             // 
             // label1
@@ -100,7 +103,7 @@
             // 
             // btnConfirmar
             // 
-            btnConfirmar.Location = new Point(599, 46);
+            btnConfirmar.Location = new Point(535, 35);
             btnConfirmar.Name = "btnConfirmar";
             btnConfirmar.Size = new Size(129, 69);
             btnConfirmar.TabIndex = 7;
@@ -110,7 +113,7 @@
             // 
             // btnActualizar
             // 
-            btnActualizar.Location = new Point(569, 245);
+            btnActualizar.Location = new Point(526, 140);
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Size = new Size(156, 86);
             btnActualizar.TabIndex = 8;
@@ -127,11 +130,27 @@
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             // 
+            // btnImportar
+            // 
+            btnImportar.Location = new Point(512, 271);
+            btnImportar.Name = "btnImportar";
+            btnImportar.Size = new Size(172, 74);
+            btnImportar.TabIndex = 10;
+            btnImportar.Text = "button2";
+            btnImportar.UseVisualStyleBackColor = true;
+            btnImportar.Click += btnImportar_Click;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            openFileDialog1.FileOk += openFileDialog1_FileOk;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnImportar);
             Controls.Add(button1);
             Controls.Add(btnActualizar);
             Controls.Add(btnConfirmar);
@@ -161,5 +180,8 @@
         private Button btnConfirmar;
         private Button btnActualizar;
         private Button button1;
+        private Button btnImportar;
+        private OpenFileDialog openFileDialog1;
+        private SaveFileDialog saveFileDialog1;
     }
 }
